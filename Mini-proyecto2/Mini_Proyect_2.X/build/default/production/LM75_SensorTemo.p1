@@ -1,0 +1,546 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[p mainexit ]
+"38 LM75_SensorTemo.c
+[; ;LM75_SensorTemo.c: 38: void setup(void);
+[v _setup `(v ~T0 @X0 0 ef ]
+"12 ./I2C.h
+[; ;./I2C.h: 12: void I2C_Init(const unsigned long c);
+[v _I2C_Init `(v ~T0 @X0 0 ef1`Cul ]
+"39 LM75_SensorTemo.c
+[; ;LM75_SensorTemo.c: 39: void USART_config(void);
+[v _USART_config `(v ~T0 @X0 0 ef ]
+"16 ./I2C.h
+[; ;./I2C.h: 16: void I2C_M_Start();
+[v _I2C_M_Start `(v ~T0 @X0 0 e? ]
+"24
+[; ;./I2C.h: 24: unsigned short I2C_M_Read(unsigned short a);
+[v _I2C_M_Read `(us ~T0 @X0 0 ef1`us ]
+"20
+[; ;./I2C.h: 20: void I2C_M_Stop();
+[v _I2C_M_Stop `(v ~T0 @X0 0 e? ]
+[v F1256 `(v ~T0 @X0 1 tf1`ul ]
+"92 F:/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
+[v __delay `JF1256 ~T0 @X0 0 e ]
+[p i __delay ]
+"194 C:\Program Files\Microchip\xc8\v2.31\pic\include\c90\stdio.h
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"43 LM75_SensorTemo.c
+[; ;LM75_SensorTemo.c: 43: void USART_SendString();
+[v _USART_SendString `(v ~T0 @X0 0 ef1`*Cuc ]
+"3387 F:/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\PIC16F887.h
+[v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
+"1416
+[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
+"166
+[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
+"3449
+[v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
+"1478
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"228
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+"1540
+[v _TRISC `Vuc ~T0 @X0 0 e@135 ]
+"290
+[v _PORTC `Vuc ~T0 @X0 0 e@7 ]
+"1546
+[s S57 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S57 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"1545
+[u S56 `S57 1 ]
+[n S56 . . ]
+"1557
+[v _TRISCbits `VS56 ~T0 @X0 0 e@135 ]
+"1602
+[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
+"352
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
+"1664
+[v _TRISE `Vuc ~T0 @X0 0 e@137 ]
+"414
+[v _PORTE `Vuc ~T0 @X0 0 e@9 ]
+"1670
+[s S61 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S61 . TRISE0 TRISE1 TRISE2 TRISE3 ]
+"1669
+[u S60 `S61 1 ]
+[n S60 . . ]
+"1677
+[v _TRISEbits `VS60 ~T0 @X0 0 e@137 ]
+"12 ./OSC.h
+[v _InitOSC `(v ~T0 @X0 0 ef1`uc ]
+"17 ./I2C_USART.h
+[; ;./I2C_USART.h: 17: void USART_lib_config(void);
+[v _USART_lib_config `(v ~T0 @X0 0 ef ]
+"1133 F:/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\PIC16F887.h
+[v _TXREG `Vuc ~T0 @X0 0 e@25 ]
+"543
+[s S19 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S19 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF ]
+"542
+[u S18 `S19 1 ]
+[n S18 . . ]
+"553
+[v _PIR1bits `VS18 ~T0 @X0 0 e@12 ]
+"1044
+[s S37 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S37 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
+"1054
+[s S38 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
+[n S38 . RCD8 . RC9 ]
+"1059
+[s S39 :6 `uc 1 :1 `uc 1 ]
+[n S39 . . nRC8 ]
+"1063
+[s S40 :6 `uc 1 :1 `uc 1 ]
+[n S40 . . RC8_9 ]
+"1043
+[u S36 `S37 1 `S38 1 `S39 1 `S40 1 ]
+[n S36 . . . . . ]
+"1068
+[v _RCSTAbits `VS36 ~T0 @X0 0 e@24 ]
+"3836
+[v _CREN `Vb ~T0 @X0 0 e@196 ]
+"31 F:/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
+[v ___nop `(v ~T0 @X0 0 ef ]
+[p i ___nop ]
+"1140 F:/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\PIC16F887.h
+[v _RCREG `Vuc ~T0 @X0 0 e@26 ]
+"1 LM75_SensorTemo.c
+[p x FOSC  =  INTRC_NOCLKOUT ]
+"2
+[p x WDTE  =  OFF        ]
+"3
+[p x PWRTE  =  OFF       ]
+"4
+[p x MCLRE  =  OFF       ]
+"5
+[p x CP  =  OFF          ]
+"6
+[p x CPD  =  OFF         ]
+"7
+[p x BOREN  =  OFF       ]
+"8
+[p x IESO  =  OFF        ]
+"9
+[p x FCMEN  =  OFF       ]
+"10
+[p x LVP  =  OFF         ]
+"13
+[p x BOR4V  =  BOR40V    ]
+"14
+[p x WRT  =  OFF       ]
+"54 F:/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\PIC16F887.h
+[; <" INDF equ 00h ;# ">
+"61
+[; <" TMR0 equ 01h ;# ">
+"68
+[; <" PCL equ 02h ;# ">
+"75
+[; <" STATUS equ 03h ;# ">
+"161
+[; <" FSR equ 04h ;# ">
+"168
+[; <" PORTA equ 05h ;# ">
+"230
+[; <" PORTB equ 06h ;# ">
+"292
+[; <" PORTC equ 07h ;# ">
+"354
+[; <" PORTD equ 08h ;# ">
+"416
+[; <" PORTE equ 09h ;# ">
+"454
+[; <" PCLATH equ 0Ah ;# ">
+"461
+[; <" INTCON equ 0Bh ;# ">
+"539
+[; <" PIR1 equ 0Ch ;# ">
+"595
+[; <" PIR2 equ 0Dh ;# ">
+"652
+[; <" TMR1 equ 0Eh ;# ">
+"659
+[; <" TMR1L equ 0Eh ;# ">
+"666
+[; <" TMR1H equ 0Fh ;# ">
+"673
+[; <" T1CON equ 010h ;# ">
+"767
+[; <" TMR2 equ 011h ;# ">
+"774
+[; <" T2CON equ 012h ;# ">
+"845
+[; <" SSPBUF equ 013h ;# ">
+"852
+[; <" SSPCON equ 014h ;# ">
+"922
+[; <" CCPR1 equ 015h ;# ">
+"929
+[; <" CCPR1L equ 015h ;# ">
+"936
+[; <" CCPR1H equ 016h ;# ">
+"943
+[; <" CCP1CON equ 017h ;# ">
+"1040
+[; <" RCSTA equ 018h ;# ">
+"1135
+[; <" TXREG equ 019h ;# ">
+"1142
+[; <" RCREG equ 01Ah ;# ">
+"1149
+[; <" CCPR2 equ 01Bh ;# ">
+"1156
+[; <" CCPR2L equ 01Bh ;# ">
+"1163
+[; <" CCPR2H equ 01Ch ;# ">
+"1170
+[; <" CCP2CON equ 01Dh ;# ">
+"1240
+[; <" ADRESH equ 01Eh ;# ">
+"1247
+[; <" ADCON0 equ 01Fh ;# ">
+"1348
+[; <" OPTION_REG equ 081h ;# ">
+"1418
+[; <" TRISA equ 085h ;# ">
+"1480
+[; <" TRISB equ 086h ;# ">
+"1542
+[; <" TRISC equ 087h ;# ">
+"1604
+[; <" TRISD equ 088h ;# ">
+"1666
+[; <" TRISE equ 089h ;# ">
+"1704
+[; <" PIE1 equ 08Ch ;# ">
+"1760
+[; <" PIE2 equ 08Dh ;# ">
+"1817
+[; <" PCON equ 08Eh ;# ">
+"1864
+[; <" OSCCON equ 08Fh ;# ">
+"1929
+[; <" OSCTUNE equ 090h ;# ">
+"1981
+[; <" SSPCON2 equ 091h ;# ">
+"2043
+[; <" PR2 equ 092h ;# ">
+"2050
+[; <" SSPADD equ 093h ;# ">
+"2057
+[; <" SSPMSK equ 093h ;# ">
+"2062
+[; <" MSK equ 093h ;# ">
+"2179
+[; <" SSPSTAT equ 094h ;# ">
+"2348
+[; <" WPUB equ 095h ;# ">
+"2418
+[; <" IOCB equ 096h ;# ">
+"2488
+[; <" VRCON equ 097h ;# ">
+"2558
+[; <" TXSTA equ 098h ;# ">
+"2644
+[; <" SPBRG equ 099h ;# ">
+"2706
+[; <" SPBRGH equ 09Ah ;# ">
+"2776
+[; <" PWM1CON equ 09Bh ;# ">
+"2846
+[; <" ECCPAS equ 09Ch ;# ">
+"2928
+[; <" PSTRCON equ 09Dh ;# ">
+"2972
+[; <" ADRESL equ 09Eh ;# ">
+"2979
+[; <" ADCON1 equ 09Fh ;# ">
+"3013
+[; <" WDTCON equ 0105h ;# ">
+"3066
+[; <" CM1CON0 equ 0107h ;# ">
+"3131
+[; <" CM2CON0 equ 0108h ;# ">
+"3196
+[; <" CM2CON1 equ 0109h ;# ">
+"3247
+[; <" EEDATA equ 010Ch ;# ">
+"3252
+[; <" EEDAT equ 010Ch ;# ">
+"3259
+[; <" EEADR equ 010Dh ;# ">
+"3266
+[; <" EEDATH equ 010Eh ;# ">
+"3273
+[; <" EEADRH equ 010Fh ;# ">
+"3280
+[; <" SRCON equ 0185h ;# ">
+"3337
+[; <" BAUDCTL equ 0187h ;# ">
+"3389
+[; <" ANSEL equ 0188h ;# ">
+"3451
+[; <" ANSELH equ 0189h ;# ">
+"3501
+[; <" EECON1 equ 018Ch ;# ">
+"3546
+[; <" EECON2 equ 018Dh ;# ">
+"4 ./OSC.h
+[; ;./OSC.h: 4: 
+[p x FOSC  =  INTRC_NOCLKOUT ]
+"30 LM75_SensorTemo.c
+[; ;LM75_SensorTemo.c: 30: unsigned char Byte1;
+[v _Byte1 `uc ~T0 @X0 1 e ]
+"31
+[; ;LM75_SensorTemo.c: 31: unsigned char Byte2;
+[v _Byte2 `uc ~T0 @X0 1 e ]
+"32
+[; ;LM75_SensorTemo.c: 32: unsigned int Int1;
+[v _Int1 `ui ~T0 @X0 1 e ]
+"33
+[; ;LM75_SensorTemo.c: 33: int sensor ;
+[v _sensor `i ~T0 @X0 1 e ]
+"34
+[; ;LM75_SensorTemo.c: 34: char Estado;
+[v _Estado `uc ~T0 @X0 1 e ]
+"35
+[; ;LM75_SensorTemo.c: 35: char COMPARE = 0;
+[v _COMPARE `uc ~T0 @X0 1 e ]
+[i _COMPARE
+-> -> 0 `i `uc
+]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"48
+[; ;LM75_SensorTemo.c: 48: void main(void){
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"49
+[; ;LM75_SensorTemo.c: 49:     setup();
+[e ( _setup ..  ]
+"50
+[; ;LM75_SensorTemo.c: 50:     I2C_Init(100000);
+[e ( _I2C_Init (1 -> -> 100000 `l `ul ]
+"51
+[; ;LM75_SensorTemo.c: 51:     USART_config();
+[e ( _USART_config ..  ]
+"53
+[; ;LM75_SensorTemo.c: 53:     char buffer[20];
+[v _buffer `uc ~T0 @X0 -> 20 `i a ]
+"54
+[; ;LM75_SensorTemo.c: 54:     int Temp;
+[v _Temp `i ~T0 @X0 1 a ]
+"57
+[; ;LM75_SensorTemo.c: 57:       while(1)
+[e :U 145 ]
+"58
+[; ;LM75_SensorTemo.c: 58:       {
+{
+"59
+[; ;LM75_SensorTemo.c: 59:       I2C_M_Start();
+[e ( _I2C_M_Start ..  ]
+"60
+[; ;LM75_SensorTemo.c: 60:       sensor = I2C_M_Read (0);
+[e = _sensor -> ( _I2C_M_Read (1 -> -> 0 `i `us `i ]
+"61
+[; ;LM75_SensorTemo.c: 61:       I2C_M_Stop();I2C_M_Read;
+[e ( _I2C_M_Stop ..  ]
+[e &U _I2C_M_Read ]
+"64
+[; ;LM75_SensorTemo.c: 64:       _delay((unsigned long)((200)*(80000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 80000000 `l `d .4000.0 `ul ]
+"70
+[; ;LM75_SensorTemo.c: 70:       sprintf(buffer, "%d \r\n",sensor);
+[e ( _sprintf (1 , (. , &U _buffer :s 1C _sensor ]
+"71
+[; ;LM75_SensorTemo.c: 71:       USART_SendString(buffer);
+[e ( _USART_SendString (1 -> &U _buffer `*Cuc ]
+"72
+[; ;LM75_SensorTemo.c: 72:       }
+}
+[e :U 144 ]
+[e $U 145  ]
+[e :U 146 ]
+"73
+[; ;LM75_SensorTemo.c: 73: }
+[e :UE 143 ]
+}
+"76
+[; ;LM75_SensorTemo.c: 76: void setup(void)
+[v _setup `(v ~T0 @X0 1 ef ]
+"77
+[; ;LM75_SensorTemo.c: 77: {
+{
+[e :U _setup ]
+[f ]
+"79
+[; ;LM75_SensorTemo.c: 79:     ANSEL = 0;
+[e = _ANSEL -> -> 0 `i `uc ]
+"80
+[; ;LM75_SensorTemo.c: 80:     TRISA = 0;
+[e = _TRISA -> -> 0 `i `uc ]
+"81
+[; ;LM75_SensorTemo.c: 81:     PORTA = 0;
+[e = _PORTA -> -> 0 `i `uc ]
+"82
+[; ;LM75_SensorTemo.c: 82:     ANSELH = 0;
+[e = _ANSELH -> -> 0 `i `uc ]
+"83
+[; ;LM75_SensorTemo.c: 83:     TRISB = 0;
+[e = _TRISB -> -> 0 `i `uc ]
+"84
+[; ;LM75_SensorTemo.c: 84:     PORTB = 0;
+[e = _PORTB -> -> 0 `i `uc ]
+"85
+[; ;LM75_SensorTemo.c: 85:     TRISC = 0;
+[e = _TRISC -> -> 0 `i `uc ]
+"86
+[; ;LM75_SensorTemo.c: 86:     PORTC = 0;
+[e = _PORTC -> -> 0 `i `uc ]
+"87
+[; ;LM75_SensorTemo.c: 87:     TRISCbits.TRISC6 = 0;
+[e = . . _TRISCbits 0 6 -> -> 0 `i `uc ]
+"89
+[; ;LM75_SensorTemo.c: 89:     TRISD = 0;
+[e = _TRISD -> -> 0 `i `uc ]
+"90
+[; ;LM75_SensorTemo.c: 90:     PORTD = 0;
+[e = _PORTD -> -> 0 `i `uc ]
+"91
+[; ;LM75_SensorTemo.c: 91:     TRISE = 0;
+[e = _TRISE -> -> 0 `i `uc ]
+"92
+[; ;LM75_SensorTemo.c: 92:     PORTE = 0;
+[e = _PORTE -> -> 0 `i `uc ]
+"93
+[; ;LM75_SensorTemo.c: 93:     TRISEbits.TRISE0 = 0;
+[e = . . _TRISEbits 0 0 -> -> 0 `i `uc ]
+"94
+[; ;LM75_SensorTemo.c: 94:     TRISEbits.TRISE3 = 0;
+[e = . . _TRISEbits 0 3 -> -> 0 `i `uc ]
+"95
+[; ;LM75_SensorTemo.c: 95:     InitOSC(7);
+[e ( _InitOSC (1 -> -> 7 `i `uc ]
+"97
+[; ;LM75_SensorTemo.c: 97: }
+[e :UE 147 ]
+}
+"99
+[; ;LM75_SensorTemo.c: 99: void USART_config(void)
+[v _USART_config `(v ~T0 @X0 1 ef ]
+"100
+[; ;LM75_SensorTemo.c: 100: {
+{
+[e :U _USART_config ]
+[f ]
+"102
+[; ;LM75_SensorTemo.c: 102:     USART_lib_config();
+[e ( _USART_lib_config ..  ]
+"103
+[; ;LM75_SensorTemo.c: 103: }
+[e :UE 148 ]
+}
+"105
+[; ;LM75_SensorTemo.c: 105: void escribir_char (uint8_t valor)
+[v _escribir_char `(v ~T0 @X0 1 ef1`uc ]
+"106
+[; ;LM75_SensorTemo.c: 106: {
+{
+[e :U _escribir_char ]
+"105
+[; ;LM75_SensorTemo.c: 105: void escribir_char (uint8_t valor)
+[v _valor `uc ~T0 @X0 1 r1 ]
+"106
+[; ;LM75_SensorTemo.c: 106: {
+[f ]
+"108
+[; ;LM75_SensorTemo.c: 108:     TXREG = valor;
+[e = _TXREG _valor ]
+"109
+[; ;LM75_SensorTemo.c: 109:     while (PIR1bits.TXIF == 0);
+[e $U 150  ]
+[e :U 151 ]
+[e :U 150 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 151  ]
+[e :U 152 ]
+"110
+[; ;LM75_SensorTemo.c: 110: }
+[e :UE 149 ]
+}
+"113
+[; ;LM75_SensorTemo.c: 113: void USART_SendString(const char *str)
+[v _USART_SendString `(v ~T0 @X0 1 ef1`*Cuc ]
+"114
+[; ;LM75_SensorTemo.c: 114: {
+{
+[e :U _USART_SendString ]
+"113
+[; ;LM75_SensorTemo.c: 113: void USART_SendString(const char *str)
+[v _str `*Cuc ~T0 @X0 1 r1 ]
+"114
+[; ;LM75_SensorTemo.c: 114: {
+[f ]
+"116
+[; ;LM75_SensorTemo.c: 116:    while(*str!='\0')
+[e $U 154  ]
+[e :U 155 ]
+"117
+[; ;LM75_SensorTemo.c: 117:    {
+{
+"119
+[; ;LM75_SensorTemo.c: 119:         escribir_char(*str);
+[e ( _escribir_char (1 -> *U _str `uc ]
+"120
+[; ;LM75_SensorTemo.c: 120:         str++;
+[e ++ _str * -> -> 1 `i `x -> -> # *U _str `i `x ]
+"121
+[; ;LM75_SensorTemo.c: 121:    }
+}
+[e :U 154 ]
+"116
+[; ;LM75_SensorTemo.c: 116:    while(*str!='\0')
+[e $ != -> *U _str `ui -> 0 `ui 155  ]
+[e :U 156 ]
+"122
+[; ;LM75_SensorTemo.c: 122: }
+[e :UE 153 ]
+}
+"124
+[; ;LM75_SensorTemo.c: 124: char leer_char(void)
+[v _leer_char `(uc ~T0 @X0 1 ef ]
+"125
+[; ;LM75_SensorTemo.c: 125: {
+{
+[e :U _leer_char ]
+[f ]
+"126
+[; ;LM75_SensorTemo.c: 126:     if (RCSTAbits.OERR ==0)
+[e $ ! == -> . . _RCSTAbits 0 1 `i -> 0 `i 158  ]
+"127
+[; ;LM75_SensorTemo.c: 127:     {
+{
+"129
+[; ;LM75_SensorTemo.c: 129:         CREN = 0;
+[e = _CREN -> -> 0 `i `b ]
+"130
+[; ;LM75_SensorTemo.c: 130:         __nop();
+[e ( ___nop ..  ]
+"131
+[; ;LM75_SensorTemo.c: 131:         CREN = 1;
+[e = _CREN -> -> 1 `i `b ]
+"132
+[; ;LM75_SensorTemo.c: 132:     }
+}
+[e :U 158 ]
+"133
+[; ;LM75_SensorTemo.c: 133:     return (RCREG);
+[e ) -> _RCREG `uc ]
+[e $UE 157  ]
+"135
+[; ;LM75_SensorTemo.c: 135: }
+[e :UE 157 ]
+}
+[p f _sprintf 8388736 ]
+[a 1C 37 100 32 13 10 0 ]
